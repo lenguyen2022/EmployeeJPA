@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Page one</title>
+</head>
+<body>
+<table th:if="${session.employeeList != null && session.employeeList != ''}">
+    <tr th:each="e : ${session.employeeList}">
+        <td th:text="${e.name}">Frank</td>
+    </tr>
+</table>
+</body>
+</html>
